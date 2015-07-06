@@ -1,6 +1,5 @@
 h1 Hello World!
-ul
-  - @articles.each do |article| 
-    li = article.title
+- @categories.each do |category|
+  = render partial: "category", locals: {category: category}
   
 
