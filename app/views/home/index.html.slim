@@ -1,5 +1,2 @@
 h1 Hello World!
-- @categories.each do |category|
-  = render partial: "category", locals: {category: category}
-  
-
+= render partial: "category", collection: @categories
