@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   root 'home#index'
+
+  namespace :admin do 
+    root "dashboard#index"
+
+    resources :articles do
+    end
+
+    resources :categories do
+    end  
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

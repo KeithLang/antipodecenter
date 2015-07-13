@@ -1,4 +1,5 @@
-p = category.name
-ul
-  - category.articles.each do |article|
-    li = render partial: "article", locals: { article: article }
+.category-item
+  p = category.name
+  ul
+    - category.articles.each do |article|
+      li = render partial: "article", locals: { article: article }
