@@ -1,3 +1,18 @@
-= link_to "Admin", admin_root_path
-h1 Hello World!
-= render partial: "category", collection: @categories
+.text-right
+  = link_to "Admin", admin_root_path
+h1.text-center AntipodeCenter.com
+.row
+  h3.text-center Democrat  |   Republican  
+.row  
+ 
+  .col-md-3
+    = render partial: "category", collection: @categories
+  .col-md-3
+    = render partial: "category", collection: @categories
+  else
+
+  .col-md-3
+    = render partial: "category", collection: @categories
+  .col-md-3 
+    = render partial: "category", collection: @categories
+  end
