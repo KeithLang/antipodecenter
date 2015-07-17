@@ -1,6 +1,11 @@
-h1 Article Listing
-- @articles.each do |article|
-  = article.party
-  <span style="padding-left:20px">
-  = link_to article.title, edit_admin_article_path(article)
-  br
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+
+p = link_to "Admin", admin_root_path 
+h1.text-center Article Listing
+.container
+  - @articles.each do |article|
+    = article.party
+    <span style="padding-left:20px">
+    = link_to article.title, edit_admin_article_path(article)
+    br

@@ -1,5 +1,25 @@
-h1 = "Edit Article - #{@article.title}"
-p = "TITLE:    #{@article.title}" 
-p = "URL:      #{@article.url}"
-p = "PARTY:    #{@article.party}"
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+= link_to "Manage Articles", admin_articles_path
+h1.text-center = "Edit Article - #{@article.title}"
+.container
+	p = "TITLE:    #{@article.title}" 
+	= simple_form_for @article.title do |f|  
+	  .inputs 
+	    = f.input :title
+	  .actions
+	    = f.submit "Save"
+	end
+	p = "URL:      #{@article.url}"
+	= simple_form_for @article.url do |f|  
+	  .inputs 
+	    = f.input :url
+	  .actions
+	    = f.submit "Save"
+	p = "PARTY:    #{@article.party}"
+	= simple_form_for @article.party do |f|  
+	  .inputs 
+	    = f.input :party
+	  .actions
+	    = f.submit "Save"
 
