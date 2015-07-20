@@ -1,6 +1,6 @@
 module SelectHelper
   def party_select
-    [['Democrats', 'democrats'], ['Republicans', 'republicans']]
+    [['Democrats', 'democrats'], ['Republicans', 'republican']]
   end
 
   def category_select

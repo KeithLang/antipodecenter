@@ -6,5 +6,5 @@ h1.text-center = "Edit Article - #{@article.title}"
   = f.input :title, label: "Article Title"
   = f.input :url
   = f.input :party, collection: party_select, prompt: "Select party"
-  = f.input :category, collection: category_select, prompt: "Select category"
+  = f.input :category_id, collection: category_select, prompt: "Select category"
   = f.submit "Save", class: "btn"

@@ -5,7 +5,7 @@ p = link_to "Admin", admin_root_path
 h1.text-center Article Listing
 .container
   - @articles.each do |article|
-    = article.party
+    = article.party.capitalize
     <span style="padding-left:20px">
     = link_to article.title, edit_admin_article_path(article)
     br
