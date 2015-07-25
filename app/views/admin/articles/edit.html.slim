@@ -1,10 +1,15 @@
+
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+= javascript_include_tag 'application', 'data-turbolinks-track' => true 
 = link_to "Manage Articles", admin_articles_path
-h1.text-center = "Edit Article - #{@article.title}"
-= simple_form_for @article, url: admin_article_path, method: "put" do |f|
-  = f.input :title, label: "Article Title"
-  = f.input :url
-  = f.input :party, collection: party_select, prompt: "Select party"
-  = f.input :category_id, collection: category_select, prompt: "Select category"
-  = f.submit "Save", class: "btn"
+.container
+  h1.text-center = "Edit Article - #{@article.title}"
+  = simple_form_for @article, url: admin_article_path, method: "put" do |f|
+    = f.input :title, label: "Article Title"
+    = f.input :url
+    = f.input :party, collection: party_select, prompt: "Select party"
+    = f.input :category_id, collection: category_select, prompt: "Select category"
+    = f.submit "Save", class: "btn"
+
+  = simple_form_for @article, url: admin_article_path, method: "delete" do |f|  
+    = f.submit "Delete article", class: "btn"

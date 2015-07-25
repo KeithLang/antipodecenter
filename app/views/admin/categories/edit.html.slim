@@ -1,1 +1,7 @@
-h1 = "Edit Category - #{@category.name}"
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+.container
+  h1 = "Edit Category - #{@category.name}"
+  = simple_form_for @category, url: admin_category_path, method: "put" do |f|
+      = f.input :name, label: "Category Title"
+      = f.submit "Save", class: "btn"

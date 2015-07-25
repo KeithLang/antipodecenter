@@ -1,7 +1,11 @@
-
-= simple_form_for @article, url: admin_articles_path, method: "post" do |f|
-  = f.input :title, label: "Article Title"
-  = f.input :url
-  = f.input :party, collection: party_select, prompt: "Select party"
-  = f.input :category_id, collection: category_select, prompt: "Select category"
-  = f.submit "Save", class: "btn"
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+.container
+  p = link_to "Admin", admin_root_path
+  h1 New Article 
+  = simple_form_for @article, url: admin_articles_path, method: "post" do |f|
+    = f.input :title, label: "Article Title"
+    = f.input :url
+    = f.input :party, collection: party_select, prompt: "Select party"
+    = f.input :category_id, collection: category_select, prompt: "Select category"
+    = f.submit "Save", class: "btn"

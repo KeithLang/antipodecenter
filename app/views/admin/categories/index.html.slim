@@ -1,4 +1,8 @@
+= link_to "Admin", admin_root_path
 h1 Category Listings
 - @categories.each do |category|
   = link_to category.name, edit_admin_category_path(category)
   br
+br
+= link_to "New Category", new_admin_category_path
+
