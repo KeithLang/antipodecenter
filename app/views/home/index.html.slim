@@ -4,11 +4,7 @@ h1.text-center AntipodeCenter.com
 .row
   h3.text-center Democrat  |   Republican  
 .row  
-  .col-md-3
-    = render partial: "category", collection: @categories
-  .col-md-3
-    = render partial: "category", collection: @categories
-  .col-md-3
-    = render partial: "category", collection: @categories
-  .col-md-3 
-    = render partial: "category", collection: @categories
+  .col-md-6
+    = render partial: "democrat_category", collection: @categories
+  .col-md-6 
+    = render partial: "republican_category", collection: @categories

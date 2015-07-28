@@ -1,7 +1,9 @@
 class Admin::ArticlesController < Admin::DashboardController
-  UPDATE_PARAMS = [:title, :url, :party, :category_id]
-  CREATE_PARAMS = [:title, :url, :party, :category_id]
+  UPDATE_PARAMS = [:title, :url, :party, :category_id, :alternative_url]
+  CREATE_PARAMS = [:title, :url, :party, :category_id, :alternative_url]
+
   before_action :fetch_article, only: [:edit, :update, :destroy]
+  
   def index
   	@articles = Article.all
   end
