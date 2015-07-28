@@ -1,7 +1,11 @@
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
 = javascript_include_tag 'application', 'data-turbolinks-track' => true 
 .container
+  = link_to "Manage Categories", admin_categories_path
   h1 = "Edit Category - #{@category.name}"
   = simple_form_for @category, url: admin_category_path, method: "put" do |f|
       = f.input :name, label: "Category Title"
       = f.submit "Save", class: "btn"
+
+  = simple_form_for @category, url: admin_category_path, method: "delete" do |f|  
+    = f.submit "Delete category", class: "btn"

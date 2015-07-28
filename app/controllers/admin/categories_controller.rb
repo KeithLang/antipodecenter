@@ -38,6 +38,13 @@ class Admin::CategoriesController < Admin::DashboardController
       flash[:error] = 'Something was wrong'
       render :edit
     end
-  end  
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+
+    redirect_to admin_categories_path
+  end    
 
 end
