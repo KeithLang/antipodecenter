@@ -1,6 +1,7 @@
 .col-md-12
   .category-item
-    p = republican_category.name
+    h2 = republican_category.name
+   
     img src=image_path("republican_#{republican_category.name.downcase}.jpg")
     ul
       - republican_category.articles.by_party(:republican).each do |article|

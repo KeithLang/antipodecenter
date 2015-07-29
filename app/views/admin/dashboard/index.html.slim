@@ -1,7 +1,14 @@
-= link_to "HomePage", root_path
-br
-h1 Hello Admin
-br
-= link_to "Manage Articles", admin_articles_path
-br
-= link_to "Manage Categories", admin_categories_path
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+.container
+  br
+  .text-right
+    = link_to "View antipodecenter.com Home Page", root_path
+  br
+  h1 Hello Admin
+  h4 Welcome to the AntipodeCenter.com admin control panel
+  br
+
+  = link_to "Manage Articles", admin_articles_path
+  br
+  = link_to "Manage Categories", admin_categories_path

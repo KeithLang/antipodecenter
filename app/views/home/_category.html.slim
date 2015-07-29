@@ -1,5 +1,5 @@
 .category-item
-  p = category.name
+  h3 = category.name
   ul
     - category.articles.each do |article|
       li = render partial: "article", locals: { article: article }

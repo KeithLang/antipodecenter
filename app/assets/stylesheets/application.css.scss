@@ -15,3 +15,95 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.category-item img {
+  /* 
+  height: 160px;
+  max-width: 250px;
+  */
+  height: 200px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.category-item h2 {
+  text-align: center;
+}
+
+
+
+.col-md-12 {
+  height: 340px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+.header img {
+  height: 300px;
+  width: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: -1;
+}
+
+/*.background img {
+  background-image: url(image-path('globe.png'));
+  background-repeat: no-repeat;
+  width: 100%;
+  
+
+  margin-left: auto;
+  margin-right: auto; 
+  display: block;
+  z-index: -2;
+
+}
+*/
+
+
+.header h1 {
+  font-size: 7.6em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  left: 0;
+  padding-top: 50px;
+  /* text-shadow: 5px 5px #fff; */
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: #9c8468;
+  opacity: 0.8;
+  /* font: 80px 'Museo700'; */
+}
+
+.header h4 {
+  font-size: 2em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  left: 0;
+  padding-top: 180px;
+  text-shadow: 2px 2px #9c8468;
+}
+
+.democrats {
+  color: blue
+}
+
+
+h3.text-center.logo.democrat img {
+  height: 120px;
+}
+
+h3.text-center.logo.republican img {
+  height: 120px;
+}
+
+
+

@@ -5,7 +5,7 @@
   h1 = "Edit Category - #{@category.name}"
   = simple_form_for @category, url: admin_category_path, method: "put" do |f|
       = f.input :name, label: "Category Title"
-      = f.submit "Save", class: "btn"
+      = f.submit "Save", class: "btn btn-success btn-lg"
 
   = simple_form_for @category, url: admin_category_path, method: "delete" do |f|  
-    = f.submit "Delete category", class: "btn"
+    = f.submit "Delete category", class: "btn btn-danger btn-lg"

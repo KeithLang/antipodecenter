@@ -8,7 +8,7 @@ class Admin::DashboardController < ActionController::Base
   private
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == "admin" && password == "1234"
+      username == "antipodeadmin" && password == "Hy6767@@@1K"
     end
   end
 end

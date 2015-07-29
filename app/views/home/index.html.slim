@@ -1,10 +1,34 @@
 .text-right
   = link_to "Admin", admin_root_path
-h1.text-center AntipodeCenter.com
-.row
-  h3.text-center Democrat  |   Republican  
+.container
+  .header
+    h1.text-center Antipode Center
+    h4.text-center Making Sense of Opposite Worlds
+    img src=image_path("globe.png")
+
+br
+
+/nav.navbar.navbar-default role="navigation"
+/  ul.nav.nav-justified
+/    li
+/      a href="#world"  World
+/    li
+/      a href="#economic"  Economic
+/    li
+/      a href="#latino"  Latino
+/    li
+/      a href="#legal"  Legal
+/    li
+/      a href="#social"  Social
+/    li
+/      a href="#political"  Political        
+    
 .row  
-  .col-md-6
-    = render partial: "democrat_category", collection: @categories
   .col-md-6 
+    h3.text-center.logo.democrat 
+      img src=image_path("democrat_logo.png")
+    = render partial: "democrat_category", collection: @categories
+  .col-md-6
+    h3.text-center.logo.republican 
+      img src=image_path("republican_logo.png")
     = render partial: "republican_category", collection: @categories

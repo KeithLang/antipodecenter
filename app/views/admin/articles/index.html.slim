@@ -1,9 +1,13 @@
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true 
 
-p = link_to "Admin", admin_root_path 
-h1.text-center Article Listing
+
 .container
+  .text-left
+  p = link_to "Admin Control Panel", admin_root_path 
+  h1.text-center Article Listing
+  h4 Click to edit articles
+  br
   - @articles.each do |article|
     = article.party.capitalize
     <span style="padding-left:20px">
@@ -11,4 +15,5 @@ h1.text-center Article Listing
     br
     
   br
-  = link_to "New Article", new_admin_article_path
+  .button type="button" class="btn btn-primary btn-lg"
+    = link_to "New Article", new_admin_article_path, :class => "btn-primary" 
