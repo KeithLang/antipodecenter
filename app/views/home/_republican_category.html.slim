@@ -4,6 +4,6 @@
    
     img src=image_path("republican_#{republican_category.name.downcase}.jpg")
     ul
-      - republican_category.articles.by_party(:republican).each do |article|
+      - republican_category.articles.by_party(:republican).first(4).each do |article|
         .col-md-6
           li = render partial: "article", locals: { article: article }
