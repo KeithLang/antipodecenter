@@ -17,6 +17,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+background: url(01.jpg); 
+background-size: 100% 100%;
+background-repeat: no-repeat;
+
+}
+
+a{
+  color: #FFFFFF;
+}
+
 .category-item img {
   /* 
   height: 160px;
@@ -69,6 +80,8 @@ ul {
 
 .header h1 {
   font-size: 7.6em;
+  
+
   position: absolute;
   width: 100%;
   text-align: center;
@@ -76,9 +89,12 @@ ul {
   left: 0;
   padding-top: 50px;
   /* text-shadow: 5px 5px #fff; */
-  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
-  color: #9c8468;
-  opacity: 0.8;
+  /* text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; */
+  text-shadow: 3px 3px 3px #fff, 1px 1px 1px blue;
+  /* color: #9c8468; */
+  color: #FF0000;
+  opacity: 1.0;
+  border-color: blue;
   /* font: 80px 'Museo700'; */
 }
 
