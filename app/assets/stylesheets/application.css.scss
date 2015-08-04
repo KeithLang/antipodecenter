@@ -17,7 +17,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
+body, h1, h2, h3, h4, a, p {
    /* background: image-url("gray_gradient_background.jpg"); 
     background-repeat: no-repeat;
     background-size: 100% 100%; */
@@ -103,7 +103,7 @@ ul {
 
 .header h1 {
   font-size: 4.6em;
-  
+  font-family: 'Lato', sans-serif;
 
   position: absolute;
   width: 100%;
@@ -122,6 +122,7 @@ ul {
 }
 
 .header h4 {
+  font-family: 'Lato', sans-serif;
   font-size: 2em;
   position: absolute;
   width: 100%;
