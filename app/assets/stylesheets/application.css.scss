@@ -18,14 +18,23 @@
 @import "bootstrap";
 
 body {
-background: image-url("01.jpg"); 
-background-size: 100% 100%;
-background-repeat: no-repeat;
-
+   /* background: image-url("gray_gradient_background.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+ 
+  font-family: 'Lato', sans-serif;
+ 
+ 
 }
 
+
+
+
+
 a{
-  color: #FFFFFF;
+  color: #000;
+  /* background-color: cadetblue; */
+  font-size: 16px;
 }
 
 .category-item img {
@@ -33,20 +42,33 @@ a{
   height: 160px;
   max-width: 250px;
   */
+
+  border:0.5px solid;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; 
+
+
   height: 200px;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
 }
 
 .category-item h2 {
   text-align: center;
+  
 }
 
-
+div.social a {
+background-color: none;
+}
+div.text-right a{
+background-color: none;
+}
 
 .col-md-12 {
-  height: 340px;
+  height: 440px;
 }
 
 ul {
@@ -61,6 +83,7 @@ ul {
   margin-right: auto;
   display: block;
   z-index: -1;
+  opacity: 0.5;
 }
 
 /*.background img {
@@ -79,7 +102,7 @@ ul {
 
 
 .header h1 {
-  font-size: 7.6em;
+  font-size: 4.6em;
   
 
   position: absolute;
@@ -87,12 +110,12 @@ ul {
   text-align: center;
   z-index: 0;
   left: 0;
-  padding-top: 50px;
+  padding-top: 70px;
   /* text-shadow: 5px 5px #fff; */
   /* text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; */
-  text-shadow: 3px 3px 3px #fff, 1px 1px 1px blue;
+  /* text-shadow: 3px 3px 3px #fff, 1px 1px 1px blue; */
   /* color: #9c8468; */
-  color: #FF0000;
+  /*color: #FF0000; */
   opacity: 1.0;
   border-color: blue;
   /* font: 80px 'Museo700'; */
@@ -105,7 +128,7 @@ ul {
   text-align: center;
   z-index: 0;
   left: 0;
-  padding-top: 180px;
+  padding-top: 150px;
   text-shadow: 2px 2px #9c8468;
 }
 
@@ -113,9 +136,23 @@ ul {
   color: blue
 }
 
+.row.logorow {
+  /* background-color: #FFF; */
+  background: image-url("gray_gradient_background.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+    border:0.5px solid;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; 
+}
+
 
 h3.text-center.logo.democrat img {
   height: 120px;
+
 }
 
 h3.text-center.logo.republican img {

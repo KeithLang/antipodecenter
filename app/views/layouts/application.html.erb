@@ -5,31 +5,34 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Lato' %>
   </head>
-  <body class="background">
-      <div class="container">
-        <div class="social text-right">
-          <a href="http://twiter.com/antipodecenter"><i class="fa fa-twitter"></i></a>
-          <a href="http://facebook.com/antipodecenter"><i class="fa fa-facebook"></i></a>
-          <a href="mailto:info@antipodecenter.com"><i class="fa fa-envelope"></i></a>
-        </div> 
-        <% if flash[:error] -%>
-          <p class='flash flash-error bg-danger text-muted'><%= flash[:error] %></p>
-        <% end -%>
-        <% if flash[:notice] -%>
-          <p class='flash flash-notice bg-success text-muted'><%= flash[:notice] %></p>
-        <% end -%>
-        <%= yield %>
-      </div>
-      <div class="container">
-        <div class="social text-center">
-          <a href="http://twiter.com/antipodecenter"><i class="fa fa-twitter"></i></a>
-          <a href="http://facebook.com/antipodecenter"><i class="fa fa-facebook"></i></a>
-          <a href="mailto:info@antipodecenter.com"><i class="fa fa-envelope"></i></a>
-        </div>  
-        <div class="copyright text-center">
-          <a href="http://antipodecenter.com">© Antipodecenter.com</a> - Design by <a href="http://digitalhub.io">DigitalHub.io</a>
-        </div>  
+  <body>
+    <div class="grayscale">
+        <div class="container nongrayscale">
+          <div class="social text-right">
+            <a href="http://twiter.com/antipodecenter"><i class="fa fa-twitter"></i></a>
+            <a href="http://facebook.com/antipodecenter"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:info@antipodecenter.com"><i class="fa fa-envelope"></i></a>
+          </div> 
+          <% if flash[:error] -%>
+            <p class='flash flash-error bg-danger text-muted'><%= flash[:error] %></p>
+          <% end -%>
+          <% if flash[:notice] -%>
+            <p class='flash flash-notice bg-success text-muted'><%= flash[:notice] %></p>
+          <% end -%>
+          <%= yield %>
+        </div>
+        <div class="container">
+          <div class="social text-center">
+            <a href="http://twiter.com/antipodecenter"><i class="fa fa-twitter"></i></a>
+            <a href="http://facebook.com/antipodecenter"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:info@antipodecenter.com"><i class="fa fa-envelope"></i></a>
+          </div>  
+          <div class="copyright text-center">
+            <a href="http://antipodecenter.com">© Antipodecenter.com</a> - Design by <a href="http://digitalhub.io">DigitalHub.io</a>
+          </div>  
+        </div>
       </div>
   </body>
 </html>
