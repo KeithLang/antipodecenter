@@ -28,7 +28,9 @@ body, h1, h2, h3, h4, a, p {
 }
 
 
-
+body {
+  background: image-url("background-paper2.jpg");
+}
 
 
 a{
@@ -49,11 +51,14 @@ a{
   border-radius: 20px; 
 
 
-  height: 300px;
-  width: 100%;
+  /*** SET DIMENSIONS OF IMAGES **/
+  height: 150px;
+  width: 50%;
   /* padding-left: 30px;
   padding-right: 30px; */
 }
+
+  /*** END DIMENSIONS    ***/
 
 .category-item h2 {
   text-align: center;
@@ -68,7 +73,8 @@ background-color: none;
 }
 
 .col-md-12 {
-  height: 540px;
+  /* height: 540px; */
+  height: 380px;
 }
 
 ul {
@@ -141,7 +147,12 @@ ul {
 .row.logorow {
   /* background-color: #FFF; */
   /* background: image-url("gray_gradient_background.jpg"); */
-  background: image-url("background-paper.jpg");
+
+  /*** THIS LINE WOULD BE FOR THE BACKGROUND COLOUR TO JUST BE INSIDE THE CONTAINER ***/
+  /* background: image-url("background-paper2.jpg"); */
+
+
+
     background-repeat: no-repeat;
     background-size: 100% 100%;
 padding-top: 100px;
