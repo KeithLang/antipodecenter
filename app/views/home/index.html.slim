@@ -1,9 +1,17 @@
-.text-right
-  = link_to "Admin", admin_root_path
+/.text-right
+/  = link_to "Admin", admin_root_path
 .container
   .header
+    .timeheader
+      =Time.now.strftime("%A") 
+      br
+      .timeheadersmall  
+        =Time.now.strftime("%b %d %Y")
+    .price  
+      = " Price $0.24c"
     h1.text-center THE REDE JOURNAL
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
+
   /img src=image_path("globe.png")
 
 

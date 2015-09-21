@@ -1,0 +1,14 @@
+/* @mixin declare-font-face($canterbury-webfont, $canterbury-webfont, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
+*/
+@font-face {
+    font-family: 'canterbury-webfont';
+    src: asset-url('canterbury-webfont.eot');
+    src: asset-url('canterbury-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('canterbury-webfont.woff2') format('woff2'),
+         asset-url('canterbury-webfont.woff') format('woff'),
+         asset-url('canterbury-webfont.ttf') format('truetype'),
+         asset-url('canterbury-webfont.svg#canterburyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

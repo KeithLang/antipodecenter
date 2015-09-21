@@ -22,6 +22,14 @@ body, h1, h2, h3, h4, a, p {
     background-repeat: no-repeat;
     background-size: 100% 100%; */
  
+
+
+
+/* @include declare-font-face('canterbury-webfont', 'canterbury-webfont'); */  
+
+
+
+
  /*  font-family: 'Lato', sans-serif; */
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
  
@@ -70,6 +78,7 @@ background-color: none;
 }
 div.text-right a{
 background-color: none;
+color: #1200AB;
 }
 
 .col-md-12 {
@@ -109,9 +118,15 @@ ul {
 
 
 .header h1, h1.text-center.header {
-  font-size: 4.6em;
-  font-family: 'Lato', sans-serif;
+  
 
+  /*
+  
+  font-family: 'Lato', sans-serif;
+  */
+    
+  font-family: 'canterbury-webfont';  
+  font-size: 5.6em;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -136,8 +151,10 @@ ul {
   text-align: center;
   z-index: 0;
   left: 0;
-  padding-top: 80px; 
-  text-shadow: 2px 2px #9c8468;
+  padding-top: 90px; 
+  /* text-shadow: 2px 2px #9c8468; */
+ text-shadow: 2px 2px #FB0009;
+
 }
 
 .democrats {
@@ -173,5 +190,30 @@ h3.text-center.logo.republican img {
   height: 120px;
 }
 
+/*
+.col-md-6 {
+  padding-top: 40px;
+}
+*/
 
 
+.timeheader {
+  float: left;
+  font-family: 'canterbury-webfont';  
+  font-size: 2.2em;
+}
+
+.timeheader .timeheadersmall {
+  float: left;
+  font-family: 'canterbury-webfont';  
+  font-size: 0.6em;
+}
+
+.price {
+  /* position: relative; */
+  padding-top: 15px;
+  float: right;
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: 400;
+}
