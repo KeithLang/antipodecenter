@@ -11,6 +11,9 @@
     span.fa.fa-external-link.fa-1x.fa-pull-left
   /= link_to "alternative view >>>", article.alternative_url, {:style => 'color: #AF091B'}
   / = link_to 'Learn More', article.alternative_url, class: 'btn btn-inverse'
-- else article.alternative_url? && article.party=="democrat"
+- elsif article.alternative_url? && article.party=="democrats"
   = link_to article.alternative_url, {:style => 'color: #AF091B'}
     span.fa.fa-external-link.fa-1x.fa-pull-left
+- else 
+
+
