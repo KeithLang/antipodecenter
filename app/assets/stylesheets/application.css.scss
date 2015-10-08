@@ -179,7 +179,8 @@ ul {
 
     background-repeat: no-repeat;
     background-size: 100% 100%;
-padding-top: 100px;
+    /* padding-top: 100px; */
+    padding-top: 50px;
 
     border:0.5px solid;
   -webkit-border-radius: 20px;
@@ -272,11 +273,32 @@ li {
 
 ul.twitterfeed {
   list-style: none;
+  text-align: center;
 }
+
 li.twitterfeed {
   padding: none;
 
+
 }
 
+li.span.fa.fa-twitter.fa-2x.fa-pull-left {
+  color: #55acee;
 
+}
  
+
+.fa.fa-twitter {
+  color: #55acee;
+ }
+
+ .threespace {
+  padding-left: 15px;
+ }
+
+ .twospace {
+  padding-left: 10px;
+  color: #55acee;  
+ }
+
+

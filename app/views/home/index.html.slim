@@ -18,7 +18,10 @@
 
     ul.twitterfeed 
       - TwitterApi.our_public_tweets.each do |tweet| 
-        li.twitterfeed =tweet.text
+        li.span.fa.fa-twitter.fa-2x.fa-pull-left 
+        span class="twospace twitterhandle" @REDEJournal
+        span class="threespace text-center" = tweet.text
+        /li.twitterfeed =tweet.text
     end 
 
    
