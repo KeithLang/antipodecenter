@@ -15,6 +15,11 @@
     /h1.text-center THE REDE JOURNAL  
     h1.text-center THE <span class="blue">RE</span><span class="red">DE</span> JOURNAL
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
+
+    ul.twitterfeed =TwitterApi.our_public_tweets.each do |tweet| 
+      li.twitterfeed =tweet.text
+    end 
+
    
 
   /img src=image_path("globe.png")

@@ -151,7 +151,8 @@ ul {
   /* font-family: 'Lato', sans-serif; */
   font-family: 'playfair_displaybold';
   font-size: 2em;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   width: 100%;
   text-align: center;
   z-index: 0;
@@ -266,4 +267,16 @@ div.border2 {
 
 li {
   padding-top: 5px;
+
 }
+
+ul.twitterfeed {
+  list-style: none;
+}
+li.twitterfeed {
+  padding: none;
+
+}
+
+
+ 
