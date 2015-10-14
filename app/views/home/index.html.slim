@@ -16,22 +16,22 @@
     h1.text-center THE <span class="blue">RE</span><span class="red">DE</span> JOURNAL
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
 
-    ul.twitterfeed 
+    ul.twitterfeed
+      /- cache('our_public_tweets', expires_in: 1.hours) do  
       - TwitterApi.our_public_tweets.each do |tweet| 
         li.span.fa.fa-twitter.fa-2x.fa-pull-left 
-        span class="twospace twitterhandle" @REDEJournal
-        span class="threespace text-center" = tweet.text
+        span class="twospace twitterhandle" = link_to "@REDEJournal", "http://twitter.com/redejournal", {:style => 'color: #55acee'}
+        
+        
+        span class="threespace text-center" = parsed_tweet tweet
+   
         br
         /li.twitterfeed =tweet.text
     end 
 
    
 
-  /img src=image_path("globe.png")
-
-
-/
-
+  
 
 /nav.navbar.navbar-default role="navigation"
 /  ul.nav.nav-justified

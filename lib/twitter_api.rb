@@ -3,6 +3,10 @@ class TwitterApi
     client.user_timeline('REDEJournal', count: 2, exclude_replies: true, include_rts: false)
   end
 
+  def self.rede_hashtag_redeleft
+    client.search("#REDEleft -rt").first.text
+  end
+
   def self.client
     @client ||= Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
