@@ -221,14 +221,16 @@ h3.text-center.logo.republican img {
   font-size: 0.6em;
 }
 
-.price {
+p.price {
   /* position: relative; */
+  font-family: 'canterbury-webfont';
   padding-top: 15px;
   float: right;
   text-align: right;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 400;
   font-size: 1.2em;
+  margin-left: 0;
 }
 
 .stamp {
@@ -315,3 +317,13 @@ span.threespace.text-center a {
   color: #55acee
 }
 
+
+.col-md-6 {
+  width:48%; 
+}
+
+.about {
+  padding: 150px;
+  text-align: center;
+  margin-top: 50px;
+}
