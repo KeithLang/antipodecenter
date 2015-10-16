@@ -244,15 +244,13 @@ p.price {
 }
 
 
+/*
 hr {
-  
-  /* border-width: 3px; */
-  border-top: 1px dotted #A0A0A0  ;
+  border-top: 2.5px solid #CECECE;
   margin: 0 150px;
-  float: none;
+  float: none; }
 
-
-}
+*/  
 
 .red {
    color: #FB0009;
@@ -263,13 +261,13 @@ hr {
 }
 
 div.border1 {
-  border-left: 1px #000 dotted;
+  border-left: 2.5px solid #CECECE;
 
   height:100%;
 }
 
 div.border2 {
-  border-right: 1px #000 dotted;
+  border-right: 2.5px solid #CECECE;
   height: 100%;
 }
 

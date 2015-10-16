@@ -17,17 +17,11 @@
       - TwitterApi.our_public_tweets.each do |tweet| 
         li.span.fa.fa-twitter.fa-2x.fa-pull-left 
         span class="twospace twitterhandle" = link_to "@REDEJournal", "http://twitter.com/redejournal", {:style => 'color: #55acee'}
-        
-        
+
         span class="threespace text-center" = parsed_tweet tweet
-   
         br
-        /li.twitterfeed =tweet.text
+        
     end 
-
-   
-
-  
 
 /nav.navbar.navbar-default role="navigation"
 /  ul.nav.nav-justified
@@ -46,7 +40,7 @@
     
 
 .row.logorow  
-  hr
+  /hr
   br
   .col-md-6.border1 
     h3.text-center.logo.democrat 
