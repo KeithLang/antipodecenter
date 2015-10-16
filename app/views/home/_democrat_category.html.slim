@@ -1,9 +1,10 @@
 .col-md-12
   .category-item
     h2 = democrat_category.name
-    img src=image_path("democrat_#{democrat_category.name.downcase}.jpg")
+    .col-md-6
+      img src=image_path("democrat_#{democrat_category.name.downcase}.jpg")
     ul
-      - democrat_category.articles.by_party(:democrats).first(4).each do |article|
+      - democrat_category.articles.by_party(:democrats).first(5).each do |article|
         .col-md-6
           li.fa.fa-newspaper-o.fa-1x = render partial: "article", locals: { article: article }
           

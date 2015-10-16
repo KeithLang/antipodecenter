@@ -7,12 +7,8 @@
       br
       .timeheadersmall  
         =Time.now.strftime("%b %d %Y")
-    /.price  
-    /  = "Price $0.24c"
       br
-    /.stamp  
-    /  = "p"     
-    /h1.text-center THE REDE JOURNAL  
+   
     h1.text-center THE <span class="blue">RE</span><span class="red">DE</span> JOURNAL
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
 
@@ -54,9 +50,9 @@
   br
   .col-md-6.border1 
     h3.text-center.logo.democrat 
-      img src=image_path("democrat_logo.png")
-    
-    = render partial: "democrat_category", collection: @categories
+      
+      img src=image_path("democrat_logo.png") 
+    = render partial: "democrat_category", collection: @categories  
     
   .col-md-6.border1.border2
     h3.text-center.logo.republican 
