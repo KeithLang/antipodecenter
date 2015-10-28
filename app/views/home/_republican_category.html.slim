@@ -1,9 +1,0 @@
-.col-md-12
-  .category-item
-    h2 = republican_category.name
-    .col-md-6
-      img src=image_path("republican_#{republican_category.name.downcase}.jpg")
-    ul
-      - republican_category.articles.by_party(:republican).first(5).each do |article|
-        .col-md-6
-          li.fa.fa-newspaper-o.fa-1x.fa-pull-left = render partial: "article", locals: { article: article }

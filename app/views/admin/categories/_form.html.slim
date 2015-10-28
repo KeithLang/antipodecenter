@@ -1,0 +1,27 @@
+= simple_form_for @category, url: admin_categories_path, method: 'post' do |f|
+  div.form-group.required
+    = f.input :name, label: 'Category Name'
+  div.form-group.required
+    = f.input :liberal_image, as: :file, label: 'Liberal Image'
+    div.target
+  div.form-group.required
+    = f.input :conservative_image, as: :file, label: 'Conservative Image'
+    div.target
+  div.form-actions
+    = f.submit 'Save', class: 'btn'
+
+javascript:
+  $(document).ready(function() {
+    $('input[type="file"]').on('change', function(event) {
+      var files = event.target.files;
+      var image = files[0]
+      var reader = new FileReader();
+      reader.onload = function(file) {
+        var img = new Image();
+        img.src = file.target.result;
+        $(event.target).parent().parent().find('.target').html(img);
+      }
+      reader.readAsDataURL(image);
+      console.log(files);
+    });
+  });

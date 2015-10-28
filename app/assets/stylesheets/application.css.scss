@@ -18,21 +18,21 @@
 @import "bootstrap";
 
 body, h1, h2, h3, h4, a, p {
-   /* background: image-url("gray_gradient_background.jpg"); 
+   /* background: image-url("gray_gradient_background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%; */
  margin-top: 1px;
 
 
 
-/* @include declare-font-face('canterbury-webfont', 'canterbury-webfont'); */  
+/* @include declare-font-face('canterbury-webfont', 'canterbury-webfont'); */
 
 
 
 
  /*  font-family: 'Lato', sans-serif; */
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
- 
+
 }
 
 
@@ -50,7 +50,7 @@ a{
 }
 
 .category-item img {
-  /* 
+  /*
   height: 160px;
   max-width: 250px;
   */
@@ -58,21 +58,21 @@ a{
   border:0.5px solid;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px; 
+  border-radius: 20px;
 
 
   /*** SET DIMENSIONS OF IMAGES **/
   height: 150px;
   /* width: 50%;  - this was the old setting */
   width: 100%
- 
+
 }
 
   /*** END DIMENSIONS    ***/
 
 .category-item h2 {
   text-align: center;
-  
+
 }
 
 div.social a {
@@ -112,10 +112,10 @@ ul {
   background-image: url(image-path('globe.png'));
   background-repeat: no-repeat;
   width: 100%;
-  
+
 
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
   display: block;
   z-index: -2;
 
@@ -124,13 +124,13 @@ ul {
 
 
 .header h1, h1.text-center.header {
-  
+
 
   /*
-  
+
   font-family: 'Lato', sans-serif;
   */
-    
+
   /*font-family: 'canterbury-webfont';   */
   font-family: 'playfair_displaybold';
   font-size: 5.6em;
@@ -161,7 +161,7 @@ ul {
   text-align: center;
   z-index: 0;
   left: 0;
-  padding-top: 100px; 
+  padding-top: 100px;
   /* text-shadow: 2px 2px #9c8468; */
  /* text-shadow: 1px 2px #FB0009; */
   text-shadow: 1px 2px #A0A0A0;
@@ -189,7 +189,7 @@ ul {
     border:0.5px solid;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 
@@ -211,13 +211,13 @@ h3.text-center.logo.republican img {
 
 .timeheader {
   float: left;
-  font-family: 'canterbury-webfont';  
+  font-family: 'canterbury-webfont';
   font-size: 2.2em;
 }
 
 .timeheader .timeheadersmall {
   float: left;
-  font-family: 'canterbury-webfont';  
+  font-family: 'canterbury-webfont';
   font-size: 0.6em;
 }
 
@@ -250,7 +250,7 @@ hr {
   margin: 0 150px;
   float: none; }
 
-*/  
+*/
 
 .red {
    color: #FB0009;
@@ -291,7 +291,7 @@ li.span.fa.fa-twitter.fa-2x.fa-pull-left {
   color: #55acee;
 
 }
- 
+
 
 .fa.fa-twitter {
   color: #55acee;
@@ -304,10 +304,10 @@ li.span.fa.fa-twitter.fa-2x.fa-pull-left {
 
  span.twospace a {
   padding-left: 10px;
-  color: #55acee;  
+  color: #55acee;
  }
 
-span.twitter-link a { 
+span.twitter-link a {
   color: #55acee
 }
 
@@ -317,7 +317,7 @@ span.threespace.text-center a {
 
 
 .col-md-6 {
-  width:48%; 
+  width:48%;
 }
 
 .about {
@@ -329,4 +329,13 @@ span.threespace.text-center a {
 h3.party {
   text-align: center;
   font-family: 'playfair_displaybold';
+}
+
+.item-row {
+  padding-bottom: 30px;
+}
+
+.target img{
+  max-width: 210;
+  max-height: 150;
 }

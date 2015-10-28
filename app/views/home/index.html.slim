@@ -1,57 +1,51 @@
-/.text-right
-/  = link_to "Admin", admin_root_path
 .container
   .header
     .timeheader
-      =Time.now.strftime("%A") 
+      =Time.now.strftime("%A")
       br
-      .timeheadersmall  
+      .timeheadersmall
         =Time.now.strftime("%b %d %Y")
       br
-   
+
     h1.text-center THE <span class="blue">RE</span><span class="red">DE</span> JOURNAL
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
 
     ul.twitterfeed
-      /- cache('our_public_tweets', expires_in: 1.hours) do  
-      - TwitterApi.our_public_tweets.each do |tweet| 
-        li.span.fa.fa-twitter.fa-2x.fa-pull-left 
+      - TwitterApi.our_public_tweets.each do |tweet|
+        li.span.fa.fa-twitter.fa-2x.fa-pull-left
         span class="twospace twitterhandle" = link_to "@REDEJournal", "http://twitter.com/redejournal", {:style => 'color: #55acee'}
 
         span class="threespace text-center" = parsed_tweet tweet
         br
-        
-    end 
 
-/nav.navbar.navbar-default role="navigation"
-/  ul.nav.nav-justified
-/    li
-/      a href="#world"  World
-/    li
-/      a href="#economic"  Economic
-/    li
-/      a href="#latino"  Latino
-/    li
-/      a href="#legal"  Legal
-/    li
-/      a href="#social"  Social
-/    li
-/      a href="#political"  Political        
-    
+    end
 
-.row.logorow  
-  /hr
+.row.logorow
   br
-  .col-md-6.border1 
-    h3.text-center.logo.democrat 
-      
+  .col-md-6.border1.pull-left
+    h3.text-center.logo.democrat
       h3.party LIBERAL
-      /img src=image_path("democrat_logo.png") 
-    = render partial: "democrat_category", collection: @categories  
-    
-  .col-md-6.border1.border2
-    h3.text-center.logo.republican 
+  .col-md-6.border2.pull-right
+    h3.text-center.logo.republican
       h3.party CONSERVATIVE
-      /img src=image_path("republican_logo.png")
-    = render partial: "republican_category", collection: @categories
-br
+
+  - @categories.each do |category|
+      .col-md-12.border1.border2.item-row
+          .category-item
+            h2 = category.name
+            .col-md-6.border2
+              .col-md-6
+                img src=(category.liberal_image.present? ? category.liberal_image.try(:url) : image_path("democrat_#{category.name.downcase}.jpg"))
+              ul
+                - category.articles.by_party(:democrat).first(5).each do |article|
+                  .col-md-6
+                    li.fa.fa-newspaper-o.fa-1x.fa-pull-left = render partial: "article", locals: { article: article }
+
+            .col-md-6
+              .col-md-6
+                img src=(category.conservative_image.present? ? category.conservative_image.try(:url) : image_path("republican_#{category.name.downcase}.jpg"))
+              ul
+                - category.articles.by_party(:republican).first(5).each do |article|
+                  .col-md-6
+                    li.fa.fa-newspaper-o.fa-1x.fa-pull-left = render partial: "article", locals: { article: article }
+  end
