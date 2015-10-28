@@ -1,7 +1,7 @@
 = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
 .container
-  = link_to "Admin Control Panel", admin_root_path
+  = link_to 'Admin Control Panel', admin_root_path
   h1 Category Listings
   h4 click to edit category names
   br
@@ -9,6 +9,6 @@
     = link_to category.name, edit_admin_category_path(category)
     br
   br
-  .button type="button" class="btn btn-primary btn-lg"
-    = link_to "New Category", new_admin_category_path, :class => "btn-primary" 
+  .button type='button' class='btn btn-primary btn-lg'
+    = link_to 'New Category', new_admin_category_path, class: '"btn-primary'
 

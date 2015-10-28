@@ -29,7 +29,9 @@ gem 'simple_form'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+
+gem 'paperclip', '~> 4.3'
 
 # gem 'intercom-rails'
 
