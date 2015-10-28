@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713172825) do
+ActiveRecord::Schema.define(version: 20151028082002) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",           limit: 255, null: false
@@ -24,9 +24,17 @@ ActiveRecord::Schema.define(version: 20150713172825) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       limit: 255, null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",                            limit: 255, null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "liberal_image_file_name",         limit: 255
+    t.string   "liberal_image_content_type",      limit: 255
+    t.integer  "liberal_image_file_size",         limit: 4
+    t.datetime "liberal_image_updated_at"
+    t.string   "conservative_image_file_name",    limit: 255
+    t.string   "conservative_image_content_type", limit: 255
+    t.integer  "conservative_image_file_size",    limit: 4
+    t.datetime "conservative_image_updated_at"
   end
 
 end

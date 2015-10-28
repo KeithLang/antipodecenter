@@ -1,11 +1,9 @@
 class Admin::ArticlesController < Admin::DashboardController
-  UPDATE_PARAMS = [:title, :url, :party, :category_id, :alternative_url]
-  CREATE_PARAMS = [:title, :url, :party, :category_id, :alternative_url]
 
-  before_action :fetch_article, only: [:edit, :update, :destroy]
-  
+  before_action :find_article, only: [:edit, :update, :destroy]
+
   def index
-  	@articles = Article.all
+    @articles = Article.all
   end
 
   def new
@@ -13,9 +11,7 @@ class Admin::ArticlesController < Admin::DashboardController
   end
 
   def create
-    @article = Article.new
-    local_params = params.require(:article).permit(CREATE_PARAMS)
-    @article.attributes = local_params
+    @article = Article.new(article_params)
     if @article.save
       flash[:notice] = 'Article created'
       redirect_to admin_articles_path
@@ -23,14 +19,13 @@ class Admin::ArticlesController < Admin::DashboardController
       flash[:error] = 'Something was wrong'
       render :new
     end
-  end  
+  end
 
   def edit
   end
 
   def update
-    local_params = params.require(:article).permit(UPDATE_PARAMS)
-    @article.attributes = local_params
+    @article.update(article_params)
     if @article.save
       flash[:notice] = 'Article saved'
       redirect_to admin_articles_path
@@ -43,12 +38,14 @@ class Admin::ArticlesController < Admin::DashboardController
   def destroy
     @article.destroy
     redirect_to admin_articles_path
-  end  
+  end
 
-  private 
-
-  def fetch_article
+  private
+  def find_article
     @article = Article.find(params[:id])
   end
 
+  def article_params
+    params.require(:article).permit(:title, :url, :party, :category_id, :alternative_url)
+  end
 end
