@@ -72,6 +72,9 @@ a{
 
 .category-item h2 {
   text-align: center;
+  /*padding-right: 50px; */
+  /* padding-left: 42%; */
+  padding-right: 5%;
 
 }
 
@@ -261,13 +264,18 @@ hr {
 }
 
 div.border1 {
-  border-left: 2.5px solid #CECECE;
+ border-left: 20.5px solid #EFEFEF; 
+    
+    
 
   height:100%;
 }
 
 div.border2 {
-  border-right: 2.5px solid #CECECE;
+  border-right: 20.5px solid #EFEFEF;
+  
+  
+
   height: 100%;
 }
 
