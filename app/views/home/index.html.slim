@@ -33,7 +33,7 @@
       .col-md-12.border1.border2.item-row
           .category-item
             h2 = category.name
-            .col-md-6.border2
+            .col-md-6
               .col-md-6
                 img src=(category.liberal_image.present? ? category.liberal_image.try(:url) : image_path("democrat_#{category.name.downcase}.jpg"))
               ul

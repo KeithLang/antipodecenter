@@ -205,11 +205,6 @@ h3.text-center.logo.republican img {
   height: 40px;
 }
 
-/*
-.col-md-6 {
-  padding-top: 40px;
-}
-*/
 
 
 .timeheader {
@@ -347,3 +342,87 @@ h3.party {
   max-width: 210;
   max-height: 150;
 }
+
+
+
+
+/***** MEDIA QUERIES *****/
+
+@media (max-width: 600px) {
+  .header h1, h1.text-center.header {
+  
+  font-family: 'playfair_displaybold';
+  font-size: 1.6em;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  left: 0;
+  opacity: 1.0;
+  border-color: blue;
+  font-weight: 600;
+  }
+  
+  p.price {
+  /* position: relative; */
+  font-family: 'canterbury-webfont';
+  padding-top: 15px;
+  float: right;
+  text-align: right;
+  font-size: 0.8em;
+  font-weight: 400;
+  
+  margin-left: 0;
+  }
+  .timeheader {
+  float: left;
+  font-family: 'canterbury-webfont';
+  font-size: 1em;
+  }
+
+.timeheader .timeheadersmall {
+  float: left;
+  font-family: 'canterbury-webfont';
+  font-size: 0.6em;
+  }
+  
+
+.header h4 {
+ 
+  font-family: 'playfair_displaybold';
+  font-size: 1em;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  left: 0;
+  padding-top: 50px;
+  text-shadow: 1px 2px #A0A0A0;
+  }
+  
+  h3 {
+  font-size: 1em;   
+  }
+
+  h2 {
+  font-size: 1.2em;  
+  }
+
+  .category-item img {
+    height: 50px;
+    width: auto;
+  }
+
+  .col-md-6 {
+  width:28%;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+  .col-md-6 {
+  width: 48%;
+ 
+  }
+} 
