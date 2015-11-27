@@ -22,15 +22,15 @@
 
 .row.logorow
   br
-  .col-md-6.border1.pull-left
+  .col-md-6.pull-left
     h3.text-center.logo.democrat
       h3.party LIBERAL
-  .col-md-6.border2.pull-right
+  .col-md-6.pull-right
     h3.text-center.logo.republican
       h3.party CONSERVATIVE
 
   - @categories.each do |category|
-      .col-md-12.border1.border2.item-row
+      .col-md-12.item-row
           .category-item
             h2 = category.name
             .col-md-6
