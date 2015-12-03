@@ -1,9 +1,13 @@
-<%= div_for comment do %>
-        <p>
-                <strong>
-                        Posted <%= time_ago_in_words(comment.created_at) %> ago
-                </strong>
-                <br/>
-                <%= comment.body %>
-        </p>
-<% end %>
+<div class="container commententry">
+  <div class="blog">
+      <%= div_for comment do %>
+              <p>
+                      <strong>
+                              Posted <%= time_ago_in_words(comment.created_at) %> ago
+                      </strong>
+                      <br/>
+                      <%= comment.body %>
+              </p>
+      <% end %>
+</div>
+</div>
