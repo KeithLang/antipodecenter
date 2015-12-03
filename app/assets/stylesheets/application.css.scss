@@ -42,6 +42,14 @@ body {
   background-size: cover;
 }
 
+/*****category links at top of categories -> goes to new page ******/
+h2 a {
+  font-size: 26px;
+  color: #171ABA;
+  text-decoration: underline;
+}
+
+
 
 a{
   color: #000;
@@ -437,3 +445,11 @@ h3.party {
 .row.logorow {
   background-color: #FFF;
 }
+
+/*
+.footer {
+
+    position:fixed;
+    bottom:0;
+}
+*/

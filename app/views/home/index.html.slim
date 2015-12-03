@@ -32,7 +32,8 @@
   - @categories.each do |category|
       .col-xs-12.item-row
           .category-item
-            h2 = category.name
+            /h2 = link_to category.name, "#{category.name.downcase}"
+            h2 = link_to category.name, "/category/#{category.name.downcase}"
             .col-xs-6
               .col-xs-6
                 img src=(category.liberal_image.present? ? category.liberal_image.try(:url) : image_path("democrat_#{category.name.downcase}.jpg"))

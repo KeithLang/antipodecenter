@@ -7,12 +7,22 @@ Rails.application.routes.draw do
     resources :articles do
     end
 
+    
+
     resources :categories do
     end  
   end
 
+  
+  #resources :category
+  #get '/category/:id' => 'category#show', as: 'category'
+
+  get '/category/:name' => 'category#show'
+
   # static controller
   get "/:page" => "static#show"
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

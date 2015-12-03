@@ -28,21 +28,22 @@
           <% end -%>
           <%= yield %>
         </div>
-        <div class="container">
-          <div class="social text-center">
-            <a href="http://twiter.com/redejournal"><i class="fa fa-twitter"></i></a>
-            <a href="http://facebook.com/redejournal"><i class="fa fa-facebook"></i></a>
-            <a href="mailto:contact@redejournal.com"><i class="fa fa-envelope"></i></a>
-          </div>  
-          <div class="copyright text-center">
-            <a href="http://redejournal.com">© redejournal.com</a> - Design by <a href="http://digitalhub.io">DigitalHub.io</a>
+        <div class="footer text-center">
+          <div class="container">
+            <div class="social">
+              <a href="http://twiter.com/redejournal"><i class="fa fa-twitter"></i></a>
+              <a href="http://facebook.com/redejournal"><i class="fa fa-facebook"></i></a>
+              <a href="mailto:contact@redejournal.com"><i class="fa fa-envelope"></i></a>
+            </div>  
+            <div class="copyright">
+              <a href="http://redejournal.com">© redejournal.com</a> - Design by <a href="http://digitalhub.io">DigitalHub.io</a>
 
-          </div>  
-          <div class="admin text-center">
-          <%= link_to "Admin", admin_root_path %> 
-          
+            </div>  
+            <div class="admin">
+            <%= link_to "Admin", admin_root_path %> 
+            
+          </div>
         </div>
-        
       </div>
   </body>
 </html>
