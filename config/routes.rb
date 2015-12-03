@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :comments
+  
+  resources :posts do
+    resources :comments, :only => [:create]
+  end
+  
   root 'home#index'
 
   namespace :admin do 

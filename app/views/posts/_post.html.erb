@@ -1,0 +1,9 @@
+<div class="container blogpage">
+  <div class="blog">
+    
+    <%= link_to "Home", root_path %>   <%= link_to "Blog", posts_path %>
+
+<h2><%= link_to_unless_current post.title, post %></h2>
+ <%= simple_format post.body %>
+ </div>
+</div>
