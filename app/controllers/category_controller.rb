@@ -1,7 +1,10 @@
 class CategoryController < ApplicationController
 
   def show
-    category = Category.find_by_id(params[:id])
-    #@article = @category.article
+  
+   
+    #category = Category.first
+    category = Category.find_by_name(params[:name])
+    @articles = category.articles
   end
 end

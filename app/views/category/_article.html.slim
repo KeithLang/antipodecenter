@@ -1,0 +1,14 @@
+= '  '
+= link_to truncate(article.title, :length=> 40), article.url
+= '  '
+- if article.alternative_url? && article.party=="republican"
+  
+  = link_to article.alternative_url, {:style => 'color: #171ABA'}
+    span.fa.fa-external-link.fa-1x.fa-pull-left
+
+- elsif article.alternative_url? && article.party=="democrats"
+  = link_to article.alternative_url, {:style => 'color: #AF091B'}
+    span.fa.fa-external-link.fa-1x.fa-pull-left
+- else 
+
+

@@ -12,7 +12,8 @@
     h4.text-center R&#276;D’&#274; TO FIND YOUR MIDDLE
 
 .row
-
-  = 
-  
-  end 
+  .container.text-center
+    - @articles.each do |article|
+        p = ' '
+        li.fa.fa-newspaper-o.fa-1x.fa-pull-left = render partial: "article", locals: { article: article }
+    end
