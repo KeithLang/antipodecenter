@@ -89,6 +89,15 @@ a:hover { background-color: transparent; }
 
 }
 
+.social {
+  /*padding-top:10px;
+  width:100%;
+   height:100%; 
+  position:absolute;
+  bottom:0;
+  left:0; */
+}
+
 div.social a {
 background-color: none;
 
@@ -197,9 +206,9 @@ ul {
 
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* padding-top: 100px; */
-    padding-top: 20px;
-
+    /* padding-top: 100px; 
+    padding-top: 20px; */
+    padding-top: 5%;
     border:0.5px solid;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -240,6 +249,7 @@ p.price {
   font-weight: 400;
   font-size: 1.2em;
   margin-left: 0;
+  padding-right:30px;
 }
 
 .stamp {
@@ -454,7 +464,7 @@ h3.party {
 
 .blog {
   background-color: #FFF;
-  padding: 20px;
+  padding: 1em;
   border-radius: 10px;
   
 }
@@ -465,8 +475,8 @@ h3.party {
 
 
 .container.blogpage {
-  /* height: 90vh; */
-  width: 110%;
+  height: 90vh; 
+  width: 100%;
 }
 
 .container.text-center {
@@ -474,11 +484,28 @@ h3.party {
   padding: 50px 10px 100px 10px;
 }
 
-
-/*
-.footer {
-
-    position:fixed;
-    bottom:0;
+.container.postentry {
+  width: 100%;
 }
-*/
+
+.footer.text-center{
+
+    width:100%;
+   /* height:100%;  */
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+.container.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.commententry {
+  width: 90%;
+}
+
+.comments {
+  height: 100%;
+}

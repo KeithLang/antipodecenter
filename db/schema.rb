@@ -23,32 +23,32 @@ ActiveRecord::Schema.define(version: 20151203155023) do
     t.string   "alternative_url", limit: 255
   end
 
-  create_table "blogit_comments", force: :cascade do |t|
-    t.string   "name",       limit: 255,   null: false
-    t.string   "email",      limit: 255,   null: false
-    t.string   "website",    limit: 255
-    t.text     "body",       limit: 65535, null: false
-    t.integer  "post_id",    limit: 4,     null: false
-    t.string   "state",      limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+#  create_table "blogit_comments", force: :cascade do |t|
+#    t.string   "name",       limit: 255,   null: false
+#    t.string   "email",      limit: 255,   null: false
+#    t.string   "website",    limit: 255
+#    t.text     "body",       limit: 65535, null: false
+#    t.integer  "post_id",    limit: 4,     null: false
+#    t.string   "state",      limit: 255
+#    t.datetime "created_at"
+#    t.datetime "updated_at"
+#  end
 
-  add_index "blogit_comments", ["post_id"], name: "index_blogit_comments_on_post_id", using: :btree
+#  add_index "blogit_comments", ["post_id"], name: "index_blogit_comments_on_post_id", using: :btree
 
-  create_table "blogit_posts", force: :cascade do |t|
-    t.string   "title",          limit: 255,                     null: false
-    t.text     "body",           limit: 65535,                   null: false
-    t.string   "state",          limit: 255,   default: "draft", null: false
-    t.integer  "comments_count", limit: 4,     default: 0,       null: false
-    t.integer  "blogger_id",     limit: 4
-    t.string   "blogger_type",   limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "description",    limit: 65535
-  end
+#  create_table "blogit_posts", force: :cascade do |t|
+#    t.string   "title",          limit: 255,                     null: false
+#    t.text     "body",           limit: 65535,                   null: false
+#    t.string   "state",          limit: 255,   default: "draft", null: false
+#    t.integer  "comments_count", limit: 4,     default: 0,       null: false
+#    t.integer  "blogger_id",     limit: 4
+#    t.string   "blogger_type",   limit: 255
+#    t.datetime "created_at"
+#    t.datetime "updated_at"
+#    t.text     "description",    limit: 65535
+#  end
 
-  add_index "blogit_posts", ["blogger_type", "blogger_id"], name: "index_blogit_posts_on_blogger_type_and_blogger_id", using: :btree
+#  add_index "blogit_posts", ["blogger_type", "blogger_id"], name: "index_blogit_posts_on_blogger_type_and_blogger_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",                            limit: 255, null: false

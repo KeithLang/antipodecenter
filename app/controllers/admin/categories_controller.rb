@@ -23,11 +23,14 @@ class Admin::CategoriesController < Admin::DashboardController
   end
 
   def edit
+
   end
 
   def update
-    @category.update(category_params)
-    if @article.save
+    if @category.update(category_params)
+   
+   # if @article.save 
+    
       flash[:notice] = 'Category saved'
       redirect_to admin_categories_path
     else
