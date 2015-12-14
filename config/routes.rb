@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins#, :skip => :registrations  #remove skip registrations to allow new admins
+  devise_for :users, :skip => :registrations #remove skip registrations to allow new users
   resources :comments
   
   resources :posts do
@@ -84,4 +86,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get '*path' => redirect('/')
 end

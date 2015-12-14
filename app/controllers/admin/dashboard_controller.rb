@@ -3,12 +3,17 @@ class Admin::DashboardController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :authenticate
+  
 
-  private
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == "antipodeadmin" && password == "Hy6767@@@1K"
-    end
-  end
+ #before_action :authenticate
+
+ before_action :authenticate_admin!
+
+
+ # private
+ # def authenticate
+ #   authenticate_or_request_with_http_basic do |username, password|
+ #     username == "antipodeadmin" && password == "Hy6767@@@1K"
+ #   end
+ # end
 end

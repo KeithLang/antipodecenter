@@ -58,3 +58,5 @@ group :development, :test do
 end
 
 gem 'twitter'
+
+gem 'devise'
