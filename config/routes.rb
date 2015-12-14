@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admins, :skip => :registrations  #remove skip registrations to allow new admins
+  
+  #This section prevents the sign_up page being displayed but allows sign_in
+  devise_scope :admins do
+  get "/admins/sign_up",  :to => redirect("/") # home#index"
+  end
+  ##
+
+  devise_for :admins#, :skip => :registrations  #remove skip registrations to allow new admins
   devise_for :users, :skip => :registrations #remove skip registrations to allow new users
   resources :comments
   #
